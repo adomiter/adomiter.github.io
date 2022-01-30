@@ -18,7 +18,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-md bg-light bg-opacity-50 navbar-light p-0 m-0">
         <div class="container-fluid">
-            <a class="navbar-brand p-0 m-0 pt-1" href="#"> <i class="material-icons" style="font-size: 40px">
+            <a class="navbar-brand p-0 m-0 pt-1" href="/"> <i class="material-icons" style="font-size: 40px">
                 analytics</i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -37,31 +37,83 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/reports.html">AI Reports</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Other</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/education.html">Education</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container-fluid">
-        <div class="card bg-dark text-white">
-            <img src="https://wallpaperaccess.com/full/3959339.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text">Last updated 3 mins ago</p>
+        <div class="row bg-primary bg-opacity-25">
+            <div class="col">
+                <div class="card text-white bg-primary bg-opacity-50" id="imageCard">
+                    <img src="/images/hawaii.jpeg" class="card-img" alt="...">
+                    <div class="card-img-overlay ">
+                        <h5 class="card-title display-6">Andrea Domiter</h5>
+                        <p class="card-text display-6">Student at the University <br> of Chicago</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="row pt-4">
+            <div class="col-sm-4 p-1 m-0">
+                <div class="card p-0 m-0">
+                    <div class="card-body">
+                        <span>
+                        <h6 class="card-title"> <i class="material-icons" style="font-size: 30px">
+                            access_time</i> Display Minute</h6>
+                        </span>
+                        <p class="card-text">The current minute of the day is: </p>
+                        <p class="card-text" id="display_time"></p>
+                        <a href="#" class="btn btn-primary" onclick="minute()">Display</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 p-1 m-0">
+                <div class="card ">
+                    <div class="card-body" id="delete">
+                        <span>
+                            <h6 class="card-title"> <i class="material-icons" style="font-size: 30px">
+                                delete_outline</i> Delete Element</h6>
+                            </span>
+                        <p class="card-text">This element will be deleted.</p>
+                        <a href="#" class="btn btn-primary " onclick="delete_element()">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 p-1 m-0">
+                <div class="card p-0 m-0">
+                    <div class="card-body">
+                        <span>
+                            <h6 class="card-title"> <i class="material-icons " style="font-size: 30px">
+                                create</i> Create element</h6>
+                            </span>
+                        <p class="card-text">The previous element will reappear.</p>
+                        <a href="#" class="btn btn-primary" onclick="add_element()">Create</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar bottom navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        adomiter@uchicago.edu
+                    </div>
+                    <div class="nav-item">
+                        &copy2022 Andrea Domiter
+                    </div>
+                    <div class="nav-items">
+                        All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -18,7 +18,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-md bg-light bg-opacity-50 navbar-light p-0 m-0">
         <div class="container-fluid">
-            <a class="navbar-brand p-0 m-0 pt-1" href="#"> <i class="material-icons" style="font-size: 40px">
+            <a class="navbar-brand p-0 m-0 pt-1" href="/"> <i class="material-icons" style="font-size: 40px">
                 analytics</i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about.html">About</a>
@@ -37,68 +37,89 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/reports.html">AI Reports</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Other</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/education.html">Education</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
 
-    <div class="container-fluid p-lg-10 bg-success text-white text-center">
-        <h1 class="display-4">Hello World!</h1>
-        <br>
-        <br>
-        <br>
+    <div class="container-fluid">
+        <div class="row">
 
-    </div>
+            <div class="col-md-6 btn-secondary text-light p-0 m-0">
+                <p class="display-6 pt-md-3 mt-5"> Census Data Reporter </p>
+                <p class="small">This project was inspired by the
+                    <a href="https://censusreporter.org/">Census Reporter</a> website. I hope to build another version of this web application for personal use. This new version will allow provide better mapping functions, the ability to compare multiple
+                    areas of interest, and the ability to save reports on areas of interest.</p>
+                <p class="small">The image to the right is a placeholder for the image of the final product.</p>
+            </div>
 
-    <!-- Carousel -->
-    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="col-md-6 p-0 m-0">
+                <img src="/images/IMG-7484.jpg" alt="Spain" class="mx-auto d-block w-100">
+            </div>
 
-        <!-- Indicators/dots -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
         </div>
 
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://lp-cms-production.imgix.net/2021-07/GettyRF_1137803766.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=50&dpr=2" alt="Spain" class="mx-auto d-block w-75">
+        <div class="row ">
+            <div class="display-6 text-center pt-3"> Features </div>
+        </div>
+        <div class="row pt-4 pb-5 mb-3">
+            <div class="col-sm-4 p-1 m-0">
+                <div class="card p-0 m-0">
+                    <div class="card-body">
+                        <span>
+                        <h6 class="card-title"> <i class="material-icons" style="font-size: 30px">
+                            access_time</i> Mapping Functions</h6>
+                        </span>
+                        <p class="card-text"> Users interested in exploratory data analysis can map variables of interest. Users can customize their maps. <br><br></p>
+                        <p class="card-text" id="display_time"></p>
+
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/07b0078af3cab92b128c7f2fa7a97043f4d0a3ff/big-2ae05368b6d01410ce07d6d224e2269a.jpg" alt="Italy" class="mx-auto d-block w-75">
+            <div class="col-sm-4 p-1 m-0">
+                <div class="card ">
+                    <div class="card-body" id="delete">
+                        <span>
+                            <h6 class="card-title"> <i class="material-icons" style="font-size: 30px">
+                                delete_outline</i> Comparisons </h6>
+                            </span>
+                        <p class="card-text">Users can select up to three locations (census tract, zip code, county, MSA, etc) and compare relevant information. Information is directly accessed through the U.S. Census Bureau API.</p>
+
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://www.syracuse.edu/images/cY6KOgf0WxbGixUTeTUUC62ZfVA=/3943/width-1100/london-large-image_08-10-202115-20-48.jpg" alt="United Kingdom" class="mx-auto d-block w-75">
-            </div>
-            <div class="carousel-item">
-                <img src="https://i.insider.com/5d26280921a86107bb51bd92?width=1000&format=jpeg&auto=webp" alt="Japan" class="mx-auto d-block w-75">
+            <div class="col-sm-4 p-1 m-0">
+                <div class="card p-0 m-0">
+                    <div class="card-body">
+                        <span>
+                            <h6 class="card-title"> <i class="material-icons " style="font-size: 30px">
+                                create</i> Save reports</h6>
+                            </span>
+                        <p class="card-text">Users can download reports on areas of interest. They can also bookmark reports to come back to later.<br><br><br></p>
+
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Left and right controls/icons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
+        <nav class="navbar bottom navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        adomiter@uchicago.edu
+                    </div>
+                    <div class="nav-item">
+                        &copy2022 Andrea Domiter
+                    </div>
+                    <div class="nav-items">
+                        All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
