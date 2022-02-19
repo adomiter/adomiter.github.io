@@ -14,105 +14,182 @@
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-md bg-light bg-opacity-50 navbar-light p-0 m-0">
-        <div class="container-fluid">
-            <a class="navbar-brand p-0 m-0 pt-1" href="/"> <i class="material-icons" style="font-size: 40px">
+    <main>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-md bg-light bg-opacity-50 navbar-light p-0 m-0">
+            <div class="container-fluid">
+                <a class="navbar-brand p-0 m-0 pt-1" href="/"> <i class="material-icons" style="font-size: 40px">
                 analytics</i></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/census.html">Census Data</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/reports.html">AI Reports</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container-fluid">
-        <div class="row bg-primary bg-opacity-25">
-            <div class="col">
-                <div class="card text-white bg-primary bg-opacity-50" id="imageCard">
-                    <img src="/images/hawaii.jpeg" class="card-img" alt="...">
-                    <div class="card-img-overlay ">
-                        <h5 class="card-title display-6">Andrea Domiter</h5>
-                        <p class="card-text display-6">Student at the University <br> of Chicago</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row pt-4 pb-5 mb-5">
-            <div class="col-sm-4 p-1 m-0">
-                <div class="card p-0 m-0">
-                    <div class="card-body">
-                        <span>
-                        <h6 class="card-title"> <i class="material-icons" style="font-size: 30px">
-                            access_time</i> Display Minute</h6>
-                        </span>
-                        <p class="card-text">The current minute of the day is: </p>
-                        <p class="card-text" id="display_time"></p>
-                        <a href="#" class="btn btn-primary" onclick="minute()">Display</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 p-1 m-0">
-                <div class="card ">
-                    <div class="card-body" id="delete">
-                        <span>
-                            <h6 class="card-title"> <i class="material-icons" style="font-size: 30px">
-                                delete_outline</i> Delete Element</h6>
-                            </span>
-                        <p class="card-text">This element will be deleted.</p>
-                        <a href="#" class="btn btn-primary " onclick="delete_element()">Delete</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 p-1 m-0">
-                <div class="card p-0 m-0">
-                    <div class="card-body">
-                        <span>
-                            <h6 class="card-title"> <i class="material-icons " style="font-size: 30px">
-                                create</i> Create element</h6>
-                            </span>
-                        <p class="card-text">The previous element will reappear.</p>
-                        <a href="#" class="btn btn-primary" onclick="add_element()">Create</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <nav class="navbar bottom navbar-light bg-light ">
-            <div class="container-fluid">
-                <div class="navbar-nav">
-                    <div class="nav-item">
-                        adomiter@uchicago.edu
-                    </div>
-                    <div class="nav-item">
-                        &copy2022 Andrea Domiter
-                    </div>
-                    <div class="nav-items">
-                        All Rights Reserved
-                    </div>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/census.html">Census Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/reports.html">AI Reports</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">APIs</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/map.html">Map</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/wikipedia.html">Wikipedia</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/ochre.html">Ochre</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
 
+        <div class="container-fluid">
+            <div class="row bg-primary bg-opacity-25">
+                <div class="col">
+                    <div class="card text-white bg-primary bg-opacity-50" id="imageCard">
+                        <img src="/images/hawaii.jpeg" class="card-img" alt="...">
+                        <div class="card-img-overlay ">
+                            <h5 class="card-title display-6">Andrea Domiter</h5>
+                            <p class="card-text display-6">Student at the University <br> of Chicago</p>
+                            <button type="button" class="btn-sm btn-light " id="button1">Message from the creator</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    </div>
+            <div class="row pt-4 pb-0 mb-0">
+                <div class="col-sm-4 p-2 m-0">
+                    <div class="card p-0 m-0">
+                        <div class="card-body">
+                            <span>
+                        <h6 class="card-title"> <i class="material-icons" style="font-size: 30px">
+                            access_time</i> Display Minute</h6>
+                        </span>
+                            <p class="card-text">The current minute of the day is: </p>
+                            <p class="card-text" id="display_time"></p>
+                            <a class="btn btn-primary" onclick="minute()">Display</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-2 m-0">
+                    <div class="card ">
+                        <div class="card-body" id="delete">
+                            <span>
+                            <h6 class="card-title"> <i class="material-icons" style="font-size: 30px">
+                                delete_outline</i> Delete Element</h6>
+                            </span>
+                            <p class="card-text">This element will be deleted.</p>
+                            <a class="btn btn-primary " onclick="delete_element()">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-2 m-0">
+                    <div class="card p-0 m-0">
+                        <div class="card-body">
+                            <span>
+                            <h6 class="card-title"> <i class="material-icons " style="font-size: 30px">
+                                create</i> Create element</h6>
+                            </span>
+                            <p class="card-text">The previous element will reappear.</p>
+                            <a class="btn btn-primary" onclick="add_element()">Create</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 p-2 m-0">
+                    <div class="card p-0 m-0">
+                        <div class="card-body">
+                            <span>
+                            <h6 class="card-title"> <i class="material-icons " style="font-size: 30px">
+                                list</i> List array</h6>
+                            </span>
+                            <p class="card-text">A sample array will be displayed.</p>
+                            <a class="btn btn-primary" id="button2">Display</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 p-2 m-0">
+                    <div class="card p-0 m-0">
+                        <div class="card-body">
+                            <span>
+                            <h6 class="card-title"> <i class="material-icons " style="font-size: 30px">
+                                sort_by_alpha</i> Sort Array</h6>
+                            </span>
+                            <p class="card-text">Sort an array of given items.</p>
+                            <a class="btn btn-primary" id="button3">Sort</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-2">
+                <div class="col-sm-6">
+                    <p id="target"></p>
+                </div>
+                <div class="col-sm-6">
+                    <p id="targettwo"></p>
+                </div>
+            </div>
+
+            <div class="row rowcolor mt-3 mb-5 pb-5 mx-1">
+                <div class="col-sm-3 mb-1">
+                    <p class="prow"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales metus rutrum, cursus ex eget, scelerisque lorem. Morbi dignissim tristique orci, a semper justo. Aliquam ac purus consectetur, facilisis lorem sed, iaculis mi.
+                        Pellentesque cursus ipsum lobortis risus lobortis, scelerisque elementum nunc efficitur. Mauris ipsum ligula, pulvinar in viverra eget, dignissim ut lorem. Nullam vehicula eget ante at iaculis. Aliquam rutrum rutrum sapien, vel
+                        dictum diam laoreet ut. Suspendisse vitae lacus id elit fringilla blandit. Donec non sollicitudin libero, in feugiat massa. Integer dapibus aliquam ipsum, quis fermentum purus lobortis sit amet. In vel turpis convallis, scelerisque
+                        libero nec, hendrerit arcu. Curabitur accumsan quam in justo elementum dapibus. Phasellus tortor libero, ullamcorper in elit vel, imperdiet ullamcorper quam. Curabitur luctus enim eu mattis maximus. Morbi semper faucibus nulla
+                        venenatis finibus.
+                    </p>
+                </div>
+                <div class="col-sm-3 mb-1">
+                    <p class="prow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus viverra accumsan in nisl nisi scelerisque. Nulla facilisi etiam dignissim diam. Etiam tempor orci eu
+                        lobortis elementum. At varius vel pharetra vel turpis nunc eget. Posuere ac ut consequat semper viverra. Blandit massa enim nec dui. Mattis nunc sed blandit libero volutpat sed cras. Non arcu risus quis varius quam quisque. Fringilla
+                        est ullamcorper eget nulla facilisi etiam dignissim. Cras adipiscing enim eu turpis egestas pretium aenean pharetra magna. Nibh sit amet commodo nulla facilisi nullam vehicula. Risus quis varius quam quisque id diam vel quam elementum.
+                        Elementum pulvinar etiam non quam. Mattis molestie a iaculis at erat pellentesque. Lorem ipsum dolor sit amet. Turpis egestas pretium aenean pharetra.</p>
+                </div>
+                <div class="col-sm-3 mb-1">
+                    <p class="prow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed felis eget velit aliquet sagittis id consectetur purus. Ut tortor pretium viverra suspendisse potenti nullam
+                        ac tortor vitae. Cras sed felis eget velit aliquet sagittis id consectetur purus. Egestas congue quisque egestas diam in arcu cursus euismod. Urna et pharetra pharetra massa massa ultricies mi quis. Mauris cursus mattis molestie
+                        a iaculis at erat. Blandit massa enim nec dui. Convallis convallis tellus id interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Sollicitudin nibh sit amet commodo. Blandit turpis cursus in hac.
+                        Nec ultrices dui sapien eget mi proin sed libero. Bibendum enim facilisis gravida neque convallis. Etiam dignissim diam quis enim lobortis scelerisque. Eu lobortis elementum nibh tellus molestie nunc.</p>
+                </div>
+                <div class="col-sm-3 mb-1">
+                    <p class="prow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dictum varius duis at consectetur lorem. Ultrices vitae auctor eu augue. Porttitor rhoncus dolor purus
+                        non enim praesent elementum facilisis leo. Vel orci porta non pulvinar neque. Vitae semper quis lectus nulla at volutpat. Velit ut tortor pretium viverra suspendisse potenti nullam ac tortor. Nulla at volutpat diam ut venenatis.
+                        Nisl nisi scelerisque eu ultrices. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Dapibus ultrices in iaculis nunc sed augue.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    adomiter@uchicago.edu
+                </div>
+                <div class="col">
+                    &copy2022 Andrea Domiter
+                </div>
+                <div class="col">
+                    All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
