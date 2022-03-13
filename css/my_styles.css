@@ -25,6 +25,7 @@
         
         .rowcolor {
             background-color: rgb(234, 248, 255);
+            text-align: justify;
         }
         
         .prow:first-child:first-letter {
