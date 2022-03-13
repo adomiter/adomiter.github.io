@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
-    <title>Wikipedia</title>
+    <title>Map</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/my_styles.css">
-    <script src="/js/showing.js"></script>
+    <script src="js/showing.js"></script>
+    <script src="js/myhowler.js"></script>
+    <script src="node_modules/howler/dist/howler.js"></script>
+
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -67,21 +70,24 @@
             </div>
         </nav>
 
-
-        <div class="container-fluid header">
-            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/657px-Wikipedia-logo-v2.svg.png" alt="Wikipedia Logo" />
-
-            <input placeholder="Type a keyword" type="text" class="bg-light" id="searchTerm" autofocus />
-
-            <a class="btn btn-primary mt-3" onclick="searchForm()">Search</a>
-
-        </div>
-
-        <div class="container-fluid">
-            <div class="row" id="wiki">
-
+        <div class="container-fluid py-5 my-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h2 class="destinationTitle">Beach</h2>
+                    <img id="destination01" src="images/italybeach.jpeg" class="img-thumbnail " alt="cow">
+                    <button type="button" class="btn-sm btn-light" id="button1">Play Sound</button>
+                </div>
+                <div class="col-lg-3">
+                    <h2 class="destinationTitle">Spain</h2>
+                    <img id="destination02" src="images/spain.jpeg" class="img-thumbnail" alt="duck">
+                    <button type="button" class="btn-sm btn-light" id="button2">Play Sound</button>
+                </div>
+                <div class="col-lg-3">
+                    <h2 class="destinationTitle">Airport</h2>
+                    <img id="destination03" src="images/londonheathrow.jpeg" class="img-thumbnail" alt="horse">
+                    <button type="button" class="btn-sm btn-light" id="button3">Play Sound</button>
+                </div>
             </div>
-
         </div>
 
     </main>
